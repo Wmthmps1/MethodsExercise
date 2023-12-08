@@ -3,8 +3,38 @@
     public class Program
     {
 
+        public static int Add(params int[] numbers)
+        {
+            int sum = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum += numbers[i];
+            }
+            return sum;
+        }
+
+        public static int Multiply(params int[] numbers)
+        {
+            int product = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                product += numbers[i];
+            }
+            return product;
+        }
+
+
+        
         static void Main(string[] args)
         {
+            var addedNumbers = Add(4, 2);
+            var multipliedNumbers = Multiply(8, 5, 4, 3);
+
+
+
+            // Exercise 1
             Console.WriteLine("Time for a fun story:");
             Console.WriteLine("Enter your name: ");
             var name = Console.ReadLine;
